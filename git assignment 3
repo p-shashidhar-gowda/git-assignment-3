@@ -1,0 +1,52 @@
+Module 2: Git Assignment - 3
+
+Tasks To Be Performed:
+1. Create a Git working directory, with the following branches:
+● Develop
+● F1
+● f2
+2. In the master branch, commit main.txt file
+3. Put develop.txt in develop branch, f1.txt and f2.txt in f1 and f2 respectively
+4. Push all these branches to GitHub
+5. On local delete f2 branch
+6. Delete the same branch on GitHub as well
+
+
+
+
+
+solution:
+
+mkdir git-assignment-3
+cd git-assignment-3
+git init 
+git remote add origin "https://github.com/p-shashidhar-gowda/git-assignment-3.git"
+nano main.txt
+git add .
+git commit -m "commit on master branch "
+git branch develop
+git branch f1
+git branch f2
+git push origin master 
+git checkout develop 
+nano develop.txt
+git add .
+git commit -m "commit on develop branch"
+git checkout f1
+nano f1.txt
+git add .
+git commit -m "commit on f1 branch "
+git checkout f2
+nano f2.txt
+git add .
+git commit -m "commit on f2 branch "
+git push origin f2
+git checkout f1
+git push origin f1
+git checkout develop 
+git push origin develop
+git checkout master
+git branch -D f2
+git push origin master 
+
+
